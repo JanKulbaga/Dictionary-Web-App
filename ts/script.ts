@@ -1,5 +1,4 @@
 const apiUrl = "https://api.dictionaryapi.dev/api/v2/entries/en/";
-const container = document.querySelector("[data-container]");
 const dataWordOutput = document.querySelector("[data-word-output]");
 const searchBtn = document.querySelector("[data-search-btn]");
 const searchInput = document.querySelector("[data-search]");
