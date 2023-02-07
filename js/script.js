@@ -12,12 +12,10 @@ const dataWordOutput = document.querySelector("[data-word-output]");
 const searchBtn = document.querySelector("[data-search-btn]");
 const searchInput = document.querySelector("[data-search]");
 searchInput === null || searchInput === void 0 ? void 0 : searchInput.addEventListener("change", (e) => {
-    const input = e.target;
-    getData(`${apiUrl}${input.value}`);
+    getData(`${apiUrl}${searchInput.value}`);
 });
 searchBtn === null || searchBtn === void 0 ? void 0 : searchBtn.addEventListener("click", (e) => {
-    const input = searchInput;
-    getData(`${apiUrl}${input.value}`);
+    getData(`${apiUrl}${searchInput === null || searchInput === void 0 ? void 0 : searchInput.value}`);
 });
 function getData(url) {
     return __awaiter(this, void 0, void 0, function* () {

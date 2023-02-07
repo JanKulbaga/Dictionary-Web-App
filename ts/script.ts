@@ -1,16 +1,15 @@
 const apiUrl = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 const dataWordOutput = document.querySelector("[data-word-output]");
-const searchBtn = document.querySelector("[data-search-btn]");
-const searchInput = document.querySelector("[data-search]");
+const searchBtn =
+  document.querySelector<HTMLButtonElement>("[data-search-btn]");
+const searchInput = document.querySelector<HTMLInputElement>("[data-search]");
 
 searchInput?.addEventListener("change", (e) => {
-  const input = e.target as HTMLInputElement;
-  getData(`${apiUrl}${input.value}`);
+  getData(`${apiUrl}${searchInput.value}`);
 });
 
 searchBtn?.addEventListener("click", (e) => {
-  const input = searchInput as HTMLInputElement;
-  getData(`${apiUrl}${input.value}`);
+  getData(`${apiUrl}${searchInput?.value}`);
 });
 
 interface Definiton {
