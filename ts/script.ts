@@ -52,9 +52,7 @@ function show(dictData: DictData): void {
 function showWord(dictData: DictData): void {
   const wordResult = document.createElement("section");
   wordResult.classList.add("word-result");
-  wordResult.innerHTML = `
-    <h1 class="word-title">${dictData.word}</h1>
-    `;
+  wordResult.innerHTML = `<h1 class="word-title">${dictData.word}</h1>`;
   if (dictData.phonetic) {
     wordResult.innerHTML += `<span class="phonetic">${dictData.phonetic}</span>`;
   } else {
@@ -76,11 +74,11 @@ function showMeanings(dictData: DictData): void {
     const meaningEl = document.createElement("article");
     meaningEl.classList.add("meaning");
     meaningEl.innerHTML = `
-    <div class="part-of-speech-container">
-        <h3 class="part-of-speech">${meaning.partOfSpeech}</h3>
-        <div class="line"></div>
-    </div>
-    <h4 class="meaning-word">Meaning</h4>
+      <div class="part-of-speech-container">
+          <h3 class="part-of-speech">${meaning.partOfSpeech}</h3>
+          <div class="line"></div>
+      </div>
+      <h4 class="meaning-word">Meaning</h4>
     `;
 
     const listDefinitions = document.createElement("ul");
@@ -119,8 +117,8 @@ function footer(dictData: DictData): void {
   const footer = document.createElement("footer");
   footer.classList.add("footer");
   footer.innerHTML = `
-  <span class="source-word">Source</span>
-  <a href="${dictData.sourceUrls[0]}" class="source-url">${dictData.sourceUrls[0]}</a>
+    <span class="source-word">Source</span>
+    <a href="${dictData.sourceUrls[0]}" class="source-url">${dictData.sourceUrls[0]}</a>
   `;
   dataWordOutput?.append(footer);
 }
