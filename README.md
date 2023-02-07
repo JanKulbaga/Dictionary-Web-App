@@ -12,7 +12,7 @@ Inštalácia TypeScript jazyka globálne pomocou CMD/Terminal
 node install -g typescript
 ```
 
-V priečinku ts použiť tento príkaz pre kompiláciu ts
+V priečinku ts použiť tento príkaz pre kompiláciu ts v CMD/Terminal
 
 ```
 tsc --target ES6 --outDir ../js script.ts
